@@ -44,7 +44,7 @@ jobs:
       - run: return 1
       - run:
           name: Upload Failed Tests
-          command: curl --data fail_tests.log http://example.com/error_logs
+          command: echo 'error detected!'
           when: on_fail
 # Orchestrate or schedule a set of jobs
 workflows:

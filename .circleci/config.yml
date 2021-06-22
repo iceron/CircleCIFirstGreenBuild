@@ -54,6 +54,9 @@ jobs:
     docker: 
       - image: circleci/node:13.8.0    
     steps:
+      - run:
+          name: "Setup custom environment variables"
+          command: echo 'export MY_ENV_VAR="FOO"' >> $BASH_ENV
       - run: echo $MY_ENV_VAR
 # Orchestrate or schedule a set of jobs
 workflows:

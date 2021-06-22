@@ -50,7 +50,7 @@ jobs:
       - image: circleci/node:13.8.0    
     steps:
       - run: echo $CIRCLE_USERNAME
-  print_env_var: 
+  print_my_env_var: 
     docker: 
       - image: circleci/node:13.8.0    
     steps:
@@ -73,3 +73,5 @@ workflows:
           requires:
             - save_hello_world_output
       - print_pipeline_id
+      - print_circle_username
+      - print_my_env_var      
